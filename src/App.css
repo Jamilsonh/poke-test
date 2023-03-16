@@ -1,0 +1,11 @@
+.container-poke {
+  width: 300px;
+  height: 300px;
+  background-color: blue;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+body {
+  background-color: #eceae7;
+}
