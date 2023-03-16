@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Link } from 'react-router-dom';
 import animation from './Gifs/load.gif';
 
@@ -55,10 +55,10 @@ export const MenuItem = styled(Link)`
 // -------------- PokeCard -------------- //
 
 export const PokemonCard = styled.div`
-  width: 150px;
+  width: 180px;
   height: 120px;
   margin: 10px;
-  background-color: #1a1b1b;
+  background-color: #595c5c;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -67,12 +67,15 @@ export const PokemonCard = styled.div`
 `;
 
 export const PokemonNameContainer = styled.div`
-  width: 100%;
+  padding: 0 5px 0 5px;
   display: flex;
   justify-content: center;
   margin-bottom: -20px;
   z-index: 1;
-  background-color: #ffffff13;
+  background-color: #ffffff4b;
+  text-transform: uppercase;
+  font-family: 'Kanit', sans-serif;
+  border-radius: 25px;
 `;
 
 export const PokemonImage = styled.img`
@@ -106,4 +109,12 @@ export const GifImage = styled.img`
   height: 64px;
   border-radius: 50%;
   margin: 25px;
+
+  //animation-duration: 5s;
 `;
+
+/*
+export const Animation = keyframes`
+  0%{height: 64px;}
+  25%{height: 125px;}
+`;*/
