@@ -1,11 +1,10 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import PokeCard from './PokeCard';
-import './App.css';
-import { ContainerMain, ContainerPokemons } from './styles';
-import { Loading } from './Loading';
+import PokeCard from '../PokeCard';
+import { ContainerMain, ContainerPokemons } from '../styles';
+import { Loading } from '../Loading';
 
-export const Home = () => {
+export const GenFive = () => {
   const [pokemons, setPokemons] = useState([]);
 
   useEffect(() => {
@@ -16,7 +15,7 @@ export const Home = () => {
 
   const getPokemons = () => {
     var endpoints = [];
-    for (var i = 1; i < 100; i++) {
+    for (var i = 494; i < 649; i++) {
       endpoints.push(`https://pokeapi.co/api/v2/pokemon/${i}/`);
     }
 
@@ -36,6 +35,7 @@ export const Home = () => {
                 <PokeCard
                   Name={pokemon.data.name}
                   Image={pokemon.data.sprites.front_default}
+                  Id={pokemon.data.id}
                 />
               </div>
             ))
